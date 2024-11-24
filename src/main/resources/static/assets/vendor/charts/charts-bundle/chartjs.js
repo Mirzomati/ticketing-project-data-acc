@@ -85,40 +85,24 @@
                     options: {
                         scales: {
                             yAxes: [{
-
+                                // configuration for y-axis
+                            }],
+                            xAxes: [{
+                                // configuration for x-axis
                             }]
                         },
-                             legend: {
-                        display: true,
-                        position: 'bottom',
-
-                        labels: {
-                            fontColor: '#71748d',
-                            fontFamily: 'Circular Std Book',
-                            fontSize: 14,
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                fontColor: '#71748d',
+                                fontFamily: 'Circular Std Book',
+                                fontSize: 14,
+                            }
                         }
-                    },
-
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                fontSize: 14,
-                                fontFamily: 'Circular Std Book',
-                                fontColor: '#71748d',
-                            }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                                fontSize: 14,
-                                fontFamily: 'Circular Std Book',
-                                fontColor: '#71748d',
-                            }
-                        }]
                     }
-                }
-
-                    
                 });
+
             }
 
             if ($('#chartjs_radar').length) {
