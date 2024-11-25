@@ -6,12 +6,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Where;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
+@Where(clause ="is_deleted=false" ) //applies to all queries
 public class User extends BaseEntity{
 
 
@@ -33,6 +35,8 @@ public class User extends BaseEntity{
 
     @Enumerated(EnumType.STRING)
     private Status status;
+
+
 
 
 }
