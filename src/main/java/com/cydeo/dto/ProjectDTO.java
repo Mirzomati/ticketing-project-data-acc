@@ -15,6 +15,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class ProjectDTO {
 
+    private Long id;
+
     @NotBlank(message = "Project Name is a required field")
     private String projectName;
 

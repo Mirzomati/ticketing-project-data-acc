@@ -15,6 +15,8 @@ public class UserDTO {
     // @NotEmpty => field should not be null, "" or empty collection
     // @NotNull => field should not be null
 
+    private Long id;
+
     @NotBlank(message = "First Name is a required field")
     @Size(max = 15, min = 2, message = "First Name must be between 2 and 15 characters long")
     private String firstName;

@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.Where;
 
 import java.time.LocalDate;
@@ -23,7 +24,8 @@ public class Project extends BaseEntity{
     @Column(unique = true)
     private String projectCode;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "manager_id")
     private User assignedManager;
 
     @Column(columnDefinition = "DATE")

@@ -2,6 +2,7 @@ package com.cydeo.service.impl;
 
 import com.cydeo.Repository.UserRepository;
 import com.cydeo.dto.UserDTO;
+import com.cydeo.entity.Role;
 import com.cydeo.entity.User;
 import com.cydeo.mapper.MapperUtil;
 import com.cydeo.service.UserService;
@@ -65,5 +66,14 @@ public class UserServiceImpl implements UserService {
 
 
 
+    }
+
+    @Override
+    public List<UserDTO> findAllUsersByRole(String role) {
+
+        return userRepository.findAllByRoleDescriptionIgnoreCase(role)
+                .stream()
+                .map(user -> mapperUtil.convert(user, UserDTO.class))
+                .toList();
     }
 }

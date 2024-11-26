@@ -12,7 +12,7 @@ public interface UserService {
     void save(UserDTO user);
     void update(UserDTO user);
     void delete(String username);
-
+    List<UserDTO> findAllUsersByRole(String role);
 
 
 }
