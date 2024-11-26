@@ -13,7 +13,7 @@ import org.hibernate.annotations.Where;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-@Where(clause ="is_deleted=false" ) //applies to all queries
+//@Where(clause ="is_deleted=false" ) //applies to all queries
 public class User extends BaseEntity{
 
 
